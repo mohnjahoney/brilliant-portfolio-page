@@ -10,7 +10,7 @@ export const featuredClips = [
   {
     id: "pythagorean-theorem",
     title: "Pythagorean Theorem",
-    video: "assets/videos/pythagorean-theorem.mov",
+    video: "assets/videos-web/featured/pythagorean-theorem.mp4",
     caption: "A simple animated proof where the geometry does the explaining.",
     rendering: {
       padding: {
@@ -33,7 +33,7 @@ export const featuredClips = [
   {
     id: "icosahedron-construction",
     title: "Icosahedron Construction",
-    video: "assets/videos/icosahedron-construction.mov",
+    video: "assets/videos-web/featured/icosahedron-construction.mp4",
     caption:
       "A 3D shape built piece by piece from the simplest possible ingredient: equilateral triangles.",
     rendering: {
@@ -60,7 +60,7 @@ export const supportingClips = [
   {
     id: "sum-of-interior-angles",
     title: "Interior Angles",
-    video: "assets/videos/sum-of-interior-angles.mov",
+    video: "assets/videos-web/sum-of-interior-angles.mp4",
     caption:
       "Interaction makes the proof feel alive-the interior angles always sum to 180 degrees.",
     rendering: {
@@ -84,7 +84,7 @@ export const supportingClips = [
   {
     id: "defective-robot-histogram",
     title: "Robot Histogram: Normal vs Defective",
-    video: "assets/videos/defective-robot-histogram.mov",
+    video: "assets/videos-web/defective-robot-histogram.mp4",
     caption:
       "A quirky, narrative visualization that grounds understanding of probability, sampling, and histograms.",
     rendering: {
@@ -108,7 +108,7 @@ export const supportingClips = [
   {
     id: "similar-triangles",
     title: "Similar Triangles",
-    video: "assets/videos/similar-triangles.mov",
+    video: "assets/videos-web/similar-triangles.mp4",
     caption:
       "Step-by-step demonstration that corresponding sides all form the same ratio.",
     rendering: {
@@ -132,7 +132,7 @@ export const supportingClips = [
   {
     id: "circumference-vs-diameter",
     title: "Pi Discovery",
-    video: "assets/videos/circumference-vs-diameter.mov",
+    video: "assets/videos-web/circumference-vs-diameter.mp4",
     caption:
       "A learner discovers what pi means by measuring a circumference against its the circle's diameter.",
     rendering: {
@@ -156,7 +156,7 @@ export const supportingClips = [
   {
     id: "threeD-figure-highlight",
     title: "3D Figure Highlight",
-    video: "assets/videos/threeD-figure-highlight.mov",
+    video: "assets/videos-web/threeD-figure-highlight.mp4",
     caption:
       "A rotatable geometry model connects base, height, and volume through motion.",
     rendering: {
@@ -180,7 +180,7 @@ export const supportingClips = [
   {
     id: "spoofify-light",
     title: "Spoofify",
-    video: "assets/videos/spoofify-light.mov",
+    video: "assets/videos-web/spoofify-light.mp4",
     caption:
       "A playful app-like interface showing sequencing, categories, and visual polish.",
     rendering: {
@@ -204,7 +204,7 @@ export const supportingClips = [
   {
     id: "function-w-locator",
     title: "Function Locator",
-    video: "assets/videos/function-w-locator.mov",
+    video: "assets/videos-web/function-w-locator.mp4",
     caption:
       "A draggable point makes the relationship between a symbolic function and its graph tangible.",
     rendering: {
@@ -228,7 +228,7 @@ export const supportingClips = [
   {
     id: "venn-diagram-anim",
     title: "Venn Diagram",
-    video: "assets/videos/venn-diagram-anim.mov",
+    video: "assets/videos-web/venn-diagram-anim.mp4",
     caption:
       "A compact animation shows why overlapping sets need to account for the shared region only once.",
     rendering: {
@@ -252,7 +252,7 @@ export const supportingClips = [
   {
     id: "final-report-anim",
     title: "Final Report",
-    video: "assets/videos/final-report-anim.mov",
+    video: "assets/videos-web/final-report-anim.mp4",
     caption:
       "A small cinematic flourish reveals the culmination of a learner's data-analysis case study.",
     rendering: {

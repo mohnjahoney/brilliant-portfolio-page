@@ -2,7 +2,7 @@ import {
   brilliantPage,
   featuredClips,
   supportingClips,
-} from "./brilliant-clips.js?v=20260516-2";
+} from "./brilliant-clips.js?v=20260516-3";
 
 const title = document.querySelector("#page-title");
 const intro = document.querySelector("#page-intro");
