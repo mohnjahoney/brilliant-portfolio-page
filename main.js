@@ -2,7 +2,7 @@ import {
   brilliantPage,
   featuredClips,
   supportingClips,
-} from "./brilliant-clips.js?v=20260516-3";
+} from "./brilliant-clips.js?v=20260517-1";
 
 const title = document.querySelector("#page-title");
 const intro = document.querySelector("#page-intro");
@@ -10,12 +10,21 @@ const featuredGrid = document.querySelector(".featured-grid");
 const supportingGrid = document.querySelector(".supporting-grid");
 
 title.textContent = brilliantPage.title;
-intro.textContent = brilliantPage.intro;
+const introParagraphs = Array.isArray(brilliantPage.intro)
+  ? brilliantPage.intro
+  : [brilliantPage.intro];
+intro.replaceChildren(...introParagraphs.map(createParagraph));
 document.body.classList.toggle("show-intro-cells", brilliantPage.showIntroCells);
 document.body.classList.toggle("show-mask-debug", brilliantPage.showMasks);
 
 featuredGrid.append(...featuredClips.map((clip) => createClipCard(clip, "featured")));
 supportingGrid.append(...supportingClips.map((clip) => createClipCard(clip, "supporting")));
+
+function createParagraph(text) {
+  const paragraph = document.createElement("p");
+  paragraph.textContent = text;
+  return paragraph;
+}
 
 function createClipCard(clip, variant) {
   const article = document.createElement("article");

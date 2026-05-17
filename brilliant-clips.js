@@ -1,7 +1,9 @@
 export const brilliantPage = {
   title: "Visual & Interactive",
-  intro:
-    "At Brilliant, I worked on visual explanations that let learners reason with their hands. Instead of simply presenting a theorem or formula, these interactions invited people to drag, rotate, rearrange, and watch the idea reveal itself.",
+  intro: [
+    "At Brilliant, I created visual explanations that let learners reason with their hands. These interactive experiences invited people to explore, ask questions, and discover.",
+    "Here are some selected clips!",
+  ],
   showIntroCells: false,
   showMasks: false,
 };
@@ -33,9 +35,10 @@ export const featuredClips = [
   {
     id: "icosahedron-construction",
     title: "Icosahedron Construction",
-    video: "assets/videos-web/featured/icosahedron-construction.mp4",
+    // video: "assets/videos-web/featured/icosahedron-construction.mp4",
+    video: "assets/videos/icosahedron-construction.mov",
     caption:
-      "A 3D shape built piece by piece from the simplest possible ingredient: equilateral triangles.",
+      "Watch what we can build with equilateral triangles in 3D.",
     rendering: {
       padding: {
         top: 10,
@@ -86,7 +89,7 @@ export const supportingClips = [
     title: "Robot Histogram: Normal vs Defective",
     video: "assets/videos-web/defective-robot-histogram.mp4",
     caption:
-      "A quirky, narrative visualization that grounds understanding of probability, sampling, and histograms.",
+      "A quirky, narrative simulation that grounds understanding of probability and histograms. ",
     rendering: {
       padding: {
         top: 2,

@@ -106,6 +106,14 @@ h1 {
   line-height: 1.65;
 }
 
+.intro-copy p {
+  margin-bottom: 0;
+}
+
+.intro-copy p + p {
+  margin-top: 0.75em;
+}
+
 .show-intro-cells .intro-copy {
   background: rgba(0, 109, 119, 0.16);
   outline: 1px solid rgba(0, 109, 119, 0.45);
@@ -263,7 +271,7 @@ h2 {
     grid-template-columns: 0.4fr 0.4fr;
     column-gap: 30px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
   }
 
   h1 {
