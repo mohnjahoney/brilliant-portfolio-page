@@ -71,11 +71,65 @@ body {
   text-transform: uppercase;
 }
 
+.brand-peek {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  isolation: isolate;
+}
+
+.brand-wordmark {
+  position: relative;
+  z-index: 2;
+}
+
 .project-label img {
   display: block;
   width: auto;
   height: 22px;
   object-fit: contain;
+}
+
+.project-label .brand-mascot {
+  position: absolute;
+  z-index: 1;
+  right: -0px;
+  bottom: 20px;
+  height: 23px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-10px, 12px) rotate(-0deg) scaleY(1);
+  transform-origin: center 48%;
+  animation: mascot-peek 15s ease-in-out infinite;
+}
+
+@keyframes mascot-peek {
+  0%,
+  80%,
+  91%,
+  100% {
+    opacity: 0;
+    transform: translate(-5px, 8px) rotate(-8deg) scaleY(1);
+  }
+
+  82%,
+  84%,
+  86% {
+    opacity: 1;
+    transform: translate(-1px, 0) rotate(-8deg) scaleY(1);
+  }
+
+  85% {
+    opacity: 1;
+    transform: translate(-1px, 0) rotate(-8deg) scaleY(0.14);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-label .brand-mascot {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 h1,
