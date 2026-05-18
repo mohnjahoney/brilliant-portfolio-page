@@ -29,7 +29,7 @@ body {
 
 .intro {
   max-width: none;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .intro-layout {
@@ -347,8 +347,7 @@ h2 {
   }
 
   .featured-grid {
-    /* width: min(960px, 100%); */
-    width: min(900px, 100%);
+    width: min(960px, 100%);
     margin-right: auto;
     margin-left: auto;
     gap: 22px;
