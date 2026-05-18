@@ -60,10 +60,15 @@ body {
 }
 
 .project-label {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0 0 14px;
+  padding: 12px 0;
+  background: var(--background);
   color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;

@@ -2,7 +2,7 @@ export const brilliantPage = {
   title: "Visual & Interactive",
   intro: [
     "At Brilliant, I created visual explanations that let learners reason with their hands. These interactive experiences invited people to explore, ask questions, and discover.",
-    "Here are some selected clips!",
+    "The original interactives were built in Elm using Brilliant's custom graphics package.",
   ],
   showIntroCells: false,
   showMasks: false,
