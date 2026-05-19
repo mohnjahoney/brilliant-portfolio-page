@@ -105,29 +105,37 @@ body {
   pointer-events: none;
   transform: translate(-10px, 12px) rotate(-0deg) scaleY(1);
   transform-origin: center 48%;
-  animation: mascot-peek 15s ease-in-out infinite;
+  animation: mascot-peek 10s ease-in-out infinite;
 }
 
+
+/* run this animation with: animation-duration: 10s; */
+
 @keyframes mascot-peek {
+  /* hidden */
   0%,
-  80%,
-  91%,
+  40%,
+  60%,
   100% {
     opacity: 0;
     transform: translate(-5px, 8px) rotate(-8deg) scaleY(1);
   }
 
-  82%,
-  84%,
-  86% {
+  /* pops out at 4s */
+  41%,
+  44.5%,
+  48%,
+  59% {
     opacity: 1;
     transform: translate(-1px, 0) rotate(-8deg) scaleY(1);
   }
 
-  85% {
+  /* quicker blink */
+  46% {
     opacity: 1;
     transform: translate(-1px, 0) rotate(-8deg) scaleY(0.14);
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
