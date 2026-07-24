@@ -65,7 +65,7 @@ export const supportingClips = [
     title: "Interior Angles",
     video: "assets/videos-web/sum-of-interior-angles.mp4",
     caption:
-      "Interaction makes the proof feel alive-the interior angles always sum to 180 degrees.",
+      "Interaction makes the proof feel alive---the interior angles always sum to 180 degrees.",
     rendering: {
       padding: {
         top: 4,
@@ -137,7 +137,7 @@ export const supportingClips = [
     title: "Pi Discovery",
     video: "assets/videos-web/circumference-vs-diameter.mp4",
     caption:
-      "A learner discovers what pi means by measuring a circumference against its the circle's diameter.",
+      "A learner discovers what pi means by measuring a circumference against the circle's diameter.",
     rendering: {
       padding: {
         top: 0,
