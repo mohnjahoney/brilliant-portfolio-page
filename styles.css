@@ -225,6 +225,15 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.clip-card__media:hover,
+.clip-card__media:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 4px 14px rgb(0 0 0 / 0.08);
+  outline: none;
 }
 
 .clip-card--featured .clip-card__media {

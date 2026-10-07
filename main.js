@@ -4,6 +4,7 @@ import {
   supportingClips,
 } from "./brilliant-clips.js";
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const title = document.querySelector("#page-title");
 const intro = document.querySelector("#page-intro");
 const featuredGrid = document.querySelector(".featured-grid");
@@ -18,6 +19,51 @@ document.body.classList.toggle("show-intro-cells", brilliantPage.showIntroCells)
 
 featuredGrid.append(...featuredClips.map((clip) => createClipCard(clip, "featured")));
 supportingGrid.append(...supportingClips.map((clip) => createClipCard(clip, "supporting")));
+
+// Clips play once on load and stop. While hovered or focused they loop; click
+// (or Enter/Space) pauses and resumes, and a manual pause survives hover.
+function setUpPlayback(target, video, title) {
+  let userPaused = false;
+
+  target.tabIndex = 0;
+  target.setAttribute("role", "button");
+  target.setAttribute("aria-label", `Play or pause: ${title}`);
+
+  const engage = () => {
+    video.loop = true;
+    if (!userPaused) video.play().catch(() => {});
+  };
+  const release = () => {
+    video.loop = false;
+  };
+  const toggle = () => {
+    if (video.paused || video.ended) {
+      userPaused = false;
+      video.play().catch(() => {});
+    } else {
+      userPaused = true;
+      video.pause();
+    }
+  };
+
+  target.addEventListener("pointerenter", (event) => {
+    if (event.pointerType === "mouse") engage();
+  });
+  target.addEventListener("pointerleave", (event) => {
+    if (event.pointerType === "mouse" && document.activeElement !== target) release();
+  });
+  target.addEventListener("focus", () => {
+    if (target.matches(":focus-visible")) engage();
+  });
+  target.addEventListener("blur", release);
+  target.addEventListener("click", toggle);
+  target.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggle();
+    }
+  });
+}
 
 function createParagraph(text) {
   const paragraph = document.createElement("p");
@@ -38,8 +84,8 @@ function createClipCard(clip, variant) {
   const video = document.createElement("video");
   video.src = clip.video;
   video.muted = true;
-  video.loop = true;
-  video.autoplay = true;
+  video.loop = false;
+  video.autoplay = !prefersReducedMotion.matches;
   video.playsInline = true;
   video.preload = "metadata";
 
@@ -54,6 +100,7 @@ function createClipCard(clip, variant) {
 
   videoFrame.append(video);
   mediaWrap.append(videoFrame);
+  setUpPlayback(mediaWrap, video, clip.title);
   body.append(heading, caption);
   article.append(mediaWrap, body);
 
