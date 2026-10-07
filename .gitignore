@@ -1,0 +1,9 @@
+ignoreme/
+node_modules/
+dist/
+
+# macOS
+.DS_Store
+
+# raw screen recordings (large; web-optimised copies live in public/assets/videos-web)
+source-videos/
