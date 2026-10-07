@@ -1,0 +1,112 @@
+{
+  "featured/pythagorean-theorem.mp4": {
+    "source": "pythagorean-theorem.mov",
+    "size": "724x1026",
+    "crop": {
+      "left": 12,
+      "right": 12,
+      "top": 10,
+      "bottom": 10
+    }
+  },
+  "featured/icosahedron-construction.mp4": {
+    "source": "icosahedron-construction.mov",
+    "size": "712x496",
+    "crop": {
+      "left": 17,
+      "right": 17,
+      "top": 5,
+      "bottom": 99
+    }
+  },
+  "sum-of-interior-angles.mp4": {
+    "source": "sum-of-interior-angles.mov",
+    "size": "662x692",
+    "crop": {
+      "left": 43,
+      "right": 43,
+      "top": 7,
+      "bottom": 35
+    }
+  },
+  "defective-robot-histogram.mp4": {
+    "source": "defective-robot-histogram.mov",
+    "size": "602x878",
+    "crop": {
+      "left": 0,
+      "right": 0,
+      "top": 9,
+      "bottom": 18
+    }
+  },
+  "similar-triangles.mp4": {
+    "source": "similar-triangles.mov",
+    "size": "676x660",
+    "crop": {
+      "left": 36,
+      "right": 15,
+      "top": 0,
+      "bottom": 20
+    }
+  },
+  "circumference-vs-diameter.mp4": {
+    "source": "circumference-vs-diameter.mov",
+    "size": "552x592",
+    "crop": {
+      "left": 11,
+      "right": 11,
+      "top": 6,
+      "bottom": 6
+    }
+  },
+  "threeD-figure-highlight.mp4": {
+    "source": "threeD-figure-highlight.mov",
+    "size": "658x612",
+    "crop": {
+      "left": 80,
+      "right": 80,
+      "top": 6,
+      "bottom": 35
+    }
+  },
+  "spoofify-light.mp4": {
+    "source": "spoofify-light.mov",
+    "size": "626x930",
+    "crop": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0
+    }
+  },
+  "function-w-locator.mp4": {
+    "source": "function-w-locator.mov",
+    "size": "822x844",
+    "crop": {
+      "left": 6,
+      "right": 6,
+      "top": 8,
+      "bottom": 17
+    }
+  },
+  "venn-diagram-anim.mp4": {
+    "source": "venn-diagram-anim.mov",
+    "size": "626x364",
+    "crop": {
+      "left": 13,
+      "right": 13,
+      "top": 6,
+      "bottom": 6
+    }
+  },
+  "final-report-anim.mp4": {
+    "source": "final-report-anim.mov",
+    "size": "598x784",
+    "crop": {
+      "left": 10,
+      "right": 10,
+      "top": 8,
+      "bottom": 8
+    }
+  }
+}

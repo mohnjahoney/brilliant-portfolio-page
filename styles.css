@@ -27,6 +27,26 @@ body {
   padding: 72px 0 56px;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+}
+
+.site-nav__home {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav__home:hover,
+.site-nav__home:focus-visible {
+  color: var(--accent);
+}
+
 .intro {
   max-width: none;
   margin-bottom: 40px;
@@ -199,17 +219,6 @@ h1 {
 }
 
 .clip-card__media {
-  --video-padding-top: 0%;
-  --video-padding-right: 0%;
-  --video-padding-bottom: 0%;
-  --video-padding-left: 0%;
-  --video-scale: 1;
-  --video-x: 0%;
-  --video-y: 0%;
-  --mask-top: 0%;
-  --mask-right: 0%;
-  --mask-bottom: 0%;
-  --mask-left: 0%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #fff;
@@ -224,9 +233,7 @@ h1 {
 
 .clip-card__video-frame {
   position: absolute;
-  inset: var(--video-padding-top) var(--video-padding-right)
-    var(--video-padding-bottom) var(--video-padding-left);
-  overflow: hidden;
+  inset: 0;
   background: #fff;
 }
 
@@ -236,45 +243,6 @@ h1 {
   height: 100%;
   object-fit: contain;
   background: #fff;
-  -webkit-clip-path: inset(
-    var(--mask-top) var(--mask-right) var(--mask-bottom) var(--mask-left)
-  );
-  clip-path: inset(
-    var(--mask-top) var(--mask-right) var(--mask-bottom) var(--mask-left)
-  );
-  transform: translate(var(--video-x), var(--video-y)) scale(var(--video-scale));
-}
-
-.show-mask-debug .clip-card__media--has-mask::before,
-.show-mask-debug .clip-card__media--has-mask::after,
-.show-mask-debug .clip-card__media--has-mask .clip-card__video-frame::before,
-.show-mask-debug .clip-card__media--has-mask .clip-card__video-frame::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  background: rgba(255, 105, 180, 0.42);
-  background: rgb(255 105 180 / 0.42);
-}
-
-.show-mask-debug .clip-card__media--has-mask::before {
-  inset: 0 0 auto;
-  height: var(--mask-top);
-}
-
-.show-mask-debug .clip-card__media--has-mask::after {
-  inset: auto 0 0;
-  height: var(--mask-bottom);
-}
-
-.show-mask-debug .clip-card__media--has-mask .clip-card__video-frame::before {
-  inset: 0 auto 0 0;
-  width: var(--mask-left);
-}
-
-.show-mask-debug .clip-card__media--has-mask .clip-card__video-frame::after {
-  inset: 0 0 0 auto;
-  width: var(--mask-right);
 }
 
 .clip-card__body {
